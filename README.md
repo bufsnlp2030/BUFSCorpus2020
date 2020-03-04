@@ -29,7 +29,7 @@
 ### [3. 오류 및 불일치 수정](#오류-및-불일치-수정)
 #### [3.1. 특정 토큰 일관성 오류 수정](#특정-토큰-일관성-오류-수정)
 #### [3.2. 연결어미(EC), 종결어미(EF) 일관성 오류 수정](#연결어미-및-종결어미-일관성-오류-수정)
-#### [3.3. Fixed expression에서 의존관계 일관성 수정](#Fixed-expression에서-의존관계-일관성-수정)
+#### [3.3. Fixed expression에서 의존관계 일관성 수정](#fixed-expression에서-의존관계-일관성-수정)
 #### [3.4. "본용언(의존소) <- 보조용언(지배소)" 규칙 적용](#본용언-및-보조용언-규칙-적용)
 
 ### [4. 형태소 분석](#형태소-분석)
@@ -46,10 +46,6 @@
 -------------------------------------------
 
 ## 원시말뭉치
-
-<details>
-<summary>펼치기/접기</summary>
-<div markdown="1">
 
 ### KCC(Korean Contemporary Corpus) : 원시 말뭉치
 - Written raw sentences of the Korean language
@@ -88,36 +84,22 @@ All the sentences are no more than 30 words.
 |KCC940|5,607,898|81,123,651|
 |계|__18,924,525__|__266,142,248__|
 
-</div>
-</details>
-
 -------------------------------------------
 
 ## 언어분석기
 
-<details>
-<summary>펼치기/접기</summary>
-<div markdown="1">
-
 ### 자동 형태소 및 구문 분석
-#### 국민대, ETRI, 울산대 언어분석기를 이용하여 분석함
-국민대 언어분석 결과는 ETRI, 울산대 언어분석 결과와 형태소 분할 기준 및 태그가 상이하여, 실험에서 ETRI, 울산대 언어분석 결과만 비교함
+* 국민대, ETRI, 울산대 언어분석기를 이용하여 분석함
+* 국민대 언어분석 결과는 ETRI, 울산대 언어분석 결과와 형태소 분할 기준 및 태그가 상이하여, 실험에서 ETRI, 울산대 언어분석 결과만 비교함   
 <img width="550" alt="그림4" src="https://user-images.githubusercontent.com/61721751/75897523-091be480-5e7c-11ea-8911-f02e5149d199.PNG">
 
 ### 반자동 형태소 및 구문 분석
-#### 복수의 자동 형태소/구문 결과를 비교하여, 일치하는 분석결과를 정답이라고 가정함
+* 복수의 자동 형태소/구문 결과를 비교하여, 일치하는 분석결과를 정답이라고 가정함   
 ![그림5](https://user-images.githubusercontent.com/61721751/75897869-965f3900-5e7c-11ea-92c0-898a2694cf53.png)
-
-</div>
-</details>
 
 -------------------------------------------
 
 ## 오류 및 불일치 수정
-
-<details>
-<summary>펼치기/접기</summary>
-<div markdown="1">
 
 ### 특정 토큰 일관성 오류 수정
 ```
@@ -136,7 +118,7 @@ All the sentences are no more than 30 words.
 
 * 마지막 token이 연결어미(EC)로 끝나는 경우 종결어미(EF)로 변환
 
-### Fixed expression에서 의존관계 일관성 수정
+### fixed expression에서 의존관계 일관성 수정
 * 뒤 토큰은 앞 토큰만 의존소로 가짐
 * 뒤 토큰이 기타 토큰을 의존소로 가지면, 기타 토큰의 지배소를 수정함
 ![그림6](https://user-images.githubusercontent.com/61721751/75899479-efc86780-5e7e-11ea-940c-15b7fd92c152.png)
@@ -163,9 +145,6 @@ All the sentences are no more than 30 words.
 * 종결기호 (., !, ?)가 문장 마지막에 나타나는 경우 바로 앞 token을 지배소로 지정
 * 콤마(,)는 바로 앞 token을 지배소로 지정
 ![그림7](https://user-images.githubusercontent.com/61721751/75899945-89901480-5e7f-11ea-9b77-16265b014a32.png)
-
-</div>
-</details>
 
 -------------------------------------------
 
