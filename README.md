@@ -73,10 +73,10 @@ All the sentences are no more than 30 words.
 <img width="550" alt="그림3" src="https://user-images.githubusercontent.com/61721751/75896241-20f26900-5e7a-11ea-97e9-2cc68b1b4bea.PNG">
 
 ## 원시말뭉치 전처리
-#### 문장부호(. , ? !)를 별도의 토큰으로 분리함
+#### 1) 문장부호(. , ? !)를 별도의 토큰으로 분리함
 ![그림2](https://user-images.githubusercontent.com/61721751/75887286-e930f480-5e6c-11ea-98f9-df0b0c72411d.png)
 
-#### 인용문에서 내포문장을 추출하여 단문으로 변경 (KCCq28, KCC940 대상)
+#### 2) 인용문에서 내포문장을 추출하여 단문으로 변경 (KCCq28, KCC940 대상)
 ||문장 수|토큰 수|
 |:------:|:------:|:------:|
 |KCC150|11,961,347|166,904,618|
@@ -179,6 +179,16 @@ All the sentences are no more than 30 words.
 ![그림8](https://user-images.githubusercontent.com/61721751/75903165-84819400-5e84-11ea-8065-de24641dd757.png)
  
 ### 규칙기반 형태소 분석 결과 정규화
+* 규칙기반 정규화 일부 (토큰 : 어절 단위)
+  |정규화 전|정규화 후|
+  |:------:|:------:|
+  |NNG+NNG|NNG|
+  |NNP+NNP|NNP|
+  |XSN+XSN|XSN|
+  |NNG+XSN|NNG|
+  |NNG+XSV|VV|
+  
+* 예시
 ```
 NNG+XSN -> NNG 	// 위원 + 장 -> 위원장/NNG
 NNG+NNG -> NNG 	// 입당 + 원서 -> 입당원서/NNG
@@ -195,10 +205,40 @@ XPN+NNP -> NNP 	// 반 + 스탈린주의 -> 반스탈린주의/NNP
 NNP+SN -> NNP 	// 갤럭시노트 + 7 -> 갤럭시노트7/NNP
 XPN+NNG -> NNG 	// 초+강수
 SN+NR -> NR 	// 500+만
-JX+JX -> JX 		// 마저+도
+JX+JX -> JX 	// 마저+도
 ```
 
 ### 예제기반 형태소 분석 결과 정규화
+* 예제기반 정규화 일부 (토큰 : 어절 단위 + 문장 부호)
+  |ETRI 형태소|울산대 형태소|규칙|정규화 후|
+  |:-------:|:-------:|:-------:|:-------:|
+  |VV+EP+EC|VV+EP+EF|–EC(ETRI), -EF(울산대)로 끝나고 다음 토큰이 ./SF인 경우 울산대 분석결과로 정규화|VV+EP+EF|
+  |NNG+JKB|NNG+NNB+JKB|ETRI의 분석결과가 간결한 경우 ETRI 분석결과로 정규화|NNG+JKB|
+  |MAG+XSV+EF|VV+EF|울산대의 분석결과가 간결한 경우 울산대 분석결과로 정규화|VV+EF|
+  |VX+EP+EF|VV+EP+EF|두 개의 언어 분석기가 언어학적으로 서로 다른 분석결과를 제시한 경우 정규화 안함|정규화 안함|
+  
+* 예시
+```diff
+예) 둘이다 .
+[E] 둘/NR+이/VCP+다/EC ./SF
++ [U] 둘/NR+이/VCP+다/EF ./SF
+```
+```diff
+예) 예민해짐에
++ [E] 예민하/VA+어/EC+지/VX+ㅁ/ETN+에/JKB
+[U] 예민/NNG+하/XSA+여/EC+지/VX+ㅁ/ETN+에/JKB
+```
+```diff
+예) 수채화
+[E] 수채/NNG+화/XSN
++ [U] 수채화/NNG
+```
+```
+예) 아물지를
+[E] 아물지/NNP+를/JX
+[U] 아물/VV+지/EC+를/JX
+```
+
 ### 수작업 평가 및 예제
 #### 1) 임의로 100문장 선택 후 수작업 평가
 
@@ -224,7 +264,9 @@ JX+JX -> JX 		// 마저+도
 |4|유지했고요|유지하+었+고+요|VERB|VV+EP+EF+JX||
 |5|.|.|PUNC|SF||   
 
-목소리는 ‘목구멍에서 나는 소리’라는 일반명사이므로 1번 XPOS의 NNP가 NNG로 바뀌어야 한다.
+```diff
+-목소리는 ‘목구멍에서 나는 소리’라는 일반명사이므로 1번 XPOS의 NNP가 NNG로 바뀌어야 한다.
+````
 
 |ID|FORM|LEMMA|UPOS|XPOS|오류 수정|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -238,7 +280,9 @@ JX+JX -> JX 		// 마저+도
 |8|뒀다|두+었+다|VERB|VV+EP+EF||
 |9|.|.|PUNC|SF||   
 
-사람의 이름(人名)은 고유명사이므로 2, 6번 XPOS의 NNG가 NNP로 바뀌어야 한다.
+```diff
+- 사람의 이름(人名)은 고유명사이므로 2, 6번 XPOS의 NNG가 NNP로 바뀌어야 한다.
+````
 
 -------------------------------------------
 
@@ -297,15 +341,15 @@ JX+JX -> JX 		// 마저+도
 
 #### 2) 구문 일치 문장 : 오류 예제
 
-|ID|FORM|LEMMA|UPOS|XPOS|FEATS|HEAD|DEPREL|DEPS|MISC|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|1|서로|서로|ADV|MAG|-|3|AP|-|-|
-|2|간격이|간격+이|NOUN|NNG+JKS|-|3|NP_SBJ|-|-|
-|3|맞게|맞+게|VERB|VV+EC|-|5|VP|-|-|
-|4|따로|따로|ADV|MAG|-|5|VP|-|-|
-|__5__|__뚫으면__|__뚫+으면__|__VERB__|__VV+EC__|__-__|__6__|__VP__|__-__|__-__|
-|6|됩니다|되+ㅂ니다|VERB|VV+EF|-|0|ROOT|-|-|
-|7|.|.|PUNC|SF|-|6|SF(punct)|-|-|
+|ID|FORM|LEMMA|UPOS|XPOS|FEATS|HEAD|DEPREL|DEPS|MISC|오류 수정|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|1|서로|서로|ADV|MAG|-|3|AP|-|-||
+|2|간격이|간격+이|NOUN|NNG+JKS|-|3|NP_SBJ|-|-||
+|3|맞게|맞+게|VERB|VV+EC|-|5|VP|-|-||
+|4|따로|따로|ADV|MAG|-|5|VP|-|-||
+|__5__|__뚫으면__|__뚫+으면__|__VERB__|__VV+EC__|__-__|__6__|__VP__|__-__|__-__|VP_CMP|
+|6|됩니다|되+ㅂ니다|VERB|VV+EF|-|0|ROOT|-|-||
+|7|.|.|PUNC|SF|-|6|SF(punct)|-|-||
 
 ![그림10](https://user-images.githubusercontent.com/61721751/75955717-c39dfc80-5ef9-11ea-9f95-7ff708b1be6f.png)
 
@@ -313,20 +357,20 @@ JX+JX -> JX 		// 마저+도
 - ID 5의 VP(DEPREL)를 그림과 같이 VP_CMP로 수정해야 한다.
 ```
 
-|ID|FORM|LEMMA|UPOS|XPOS|FEATS|HEAD|DEPREL|DEPS|MISC|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|1|그의|그+의|PRON|NP+JKG|-|2|NP_MOD|-|-|
-|2|영화|영화|NOUN|NNG|-|3|NP|-|-|
-|__3__|__속__|__속__|__NOUN__|__NNG__|__-__|__4__|__NP__|__-__|__-__|
-|4|미니멀리즘적|미니멀리즘적|NOUN|NNG|-|5|NP|-|-|
-|5|표현|표현|NOUN|NNG|-|6|NP|-|-|
-|6|방식처럼|방식+처럼|NOUN|NNG+JKB|-|7|NP_AJT|-|-|
-|7|절제되고|절제되+고|VERB|VV+EC|-|10|VP|-|-|
-|8|함축적인|함축적+이+ㄴ|VERB|NNG+VCP+ETM|-|9|VNP_MOD|-|-|
-|9|미학이|미학+이|NOUN|NNG+JKS|-|10|NP_SBJ|-|-|
-|10|돋보이는|돋보이+는|VERB|VV+ETM|-|11|VP_MOD|-|-|
-|11|작품들이다|작품들+이+다|VERB|NNG+VCP+EF|-|0|ROOT|-|-|
-|12|.|.|PUNC|SF|-|11|SF(punct)|-|-|
+|ID|FORM|LEMMA|UPOS|XPOS|FEATS|HEAD|DEPREL|DEPS|MISC|오류 수정|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|1|그의|그+의|PRON|NP+JKG|-|2|NP_MOD|-|-||
+|2|영화|영화|NOUN|NNG|-|3|NP|-|-||
+|__3__|__속__|__속__|__NOUN__|__NNG__|__-__|__4__|__NP__|__-__|__-__|6|
+|4|미니멀리즘적|미니멀리즘적|NOUN|NNG|-|5|NP|-|-||
+|5|표현|표현|NOUN|NNG|-|6|NP|-|-||
+|6|방식처럼|방식+처럼|NOUN|NNG+JKB|-|7|NP_AJT|-|-||
+|7|절제되고|절제되+고|VERB|VV+EC|-|10|VP|-|-||
+|8|함축적인|함축적+이+ㄴ|VERB|NNG+VCP+ETM|-|9|VNP_MOD|-|-||
+|9|미학이|미학+이|NOUN|NNG+JKS|-|10|NP_SBJ|-|-||
+|10|돋보이는|돋보이+는|VERB|VV+ETM|-|11|VP_MOD|-|-||
+|11|작품들이다|작품들+이+다|VERB|NNG+VCP+EF|-|0|ROOT|-|-||
+|12|.|.|PUNC|SF|-|11|SF(punct)|-|-||
 
 ![그림11](https://user-images.githubusercontent.com/61721751/75958399-7d4b9c00-5eff-11ea-8898-57320236cefa.png)
 
