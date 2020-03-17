@@ -169,14 +169,14 @@ All the sentences are no more than 30 words.
   |형태소 일치(정규화 전)|23,227,819|13.92%|2,242,867|18.75%|
   |형태소 일치(정규화 후)|117,849,839|__70.61%__|8,875,652|__74.20%__|
 
-* KCC940[KCC940_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC940_equal_morph.egg "클릭하면 파일을 다운로드 하는 곳으로 이동합니다.")   
+* KCC940 [KCC940_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC940_equal_morph.egg "클릭하면 파일을 다운로드 하는 곳으로 이동합니다.")   
   ||토큰 수 ||문장 수||
   |:------:|:------:|:------:|:------:|:------:|
   |전체|81,123,597|-|5,607,899|-|
   |형태소 일치(정규화 전)|10,195,189|12.57%|928,976|16.57%|
   |형태소 일치(정규화 후)|56,938,877|__70.19%__|4,157,230|__74.13%__|
   
-* KCCq28[KCCq28_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCCq28_equal_morph.egg "클릭하면 파일을 다운로드 하는 곳으로 이동합니다.")   
+* KCCq28 [KCCq28_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCCq28_equal_morph.egg "클릭하면 파일을 다운로드 하는 곳으로 이동합니다.")   
   ||토큰 수 ||문장 수||
   |:------:|:------:|:------:|:------:|:------:|
   |전체|18,113,978|-|1,355,280|-|
