@@ -241,10 +241,10 @@ JX+JX -> JX 	// 마저+도
 ```
 ```diff
 2번 규칙 예) 말이라는 게 그래서 허무한 것인지도 모른다 .
-[E] 말이라는/NNG+VCP+ETM 게/NNB+JKS '그래서/MAG+XSV+EC' 허무한/NNG+XSA+ETM
-것인지도/NNB+VCP+EC+JX '모른다/VV+EC ./SF'
-+ [U] 말이라는/NNG+VCP+ETM 게/NNB+JKS '그래서/VV+EC' 허무한/NNG+XSA+ETM
-+ 것인지도/NNB+VCP+EC+JX '모른다/VV+EF ./SF'
+[E] 말이라는/NNG+VCP+ETM 게/NNB+JKS <<그래서/MAG+XSV+EC>> 허무한/NNG+XSA+ETM
+것인지도/NNB+VCP+EC+JX [[모른다/VV+EC ./SF]]
++ [U] 말이라는/NNG+VCP+ETM 게/NNB+JKS <<그래서/VV+EC>> 허무한/NNG+XSA+ETM
++ 것인지도/NNB+VCP+EC+JX [[모른다/VV+EF ./SF]]
 ```
 ```
 3번 규칙 예) 아물지를
