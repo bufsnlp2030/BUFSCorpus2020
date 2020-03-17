@@ -88,7 +88,7 @@ All the sentences are no more than 30 words.
 |KCC150|11,961,347|166,904,509|
 |KCCq28|1,355,280|18,113,978|
 |KCC940|5,607,899|81,123,597|
-|계|__18,924,526__|__266,142,248__|
+|계|__18,924,526__|__266,142,084__|
 
 #### 3) 문장 길이 별 전처리 말뭉치 분포
 <img width="550" alt="그림3" src="https://user-images.githubusercontent.com/61721751/75896241-20f26900-5e7a-11ea-97e9-2cc68b1b4bea.PNG">
@@ -162,7 +162,7 @@ All the sentences are no more than 30 words.
 #### 1) 형태소 정규화 전후 일치 토큰 및 문장수
 정규화 후 전체 토큰 수 188,208,139(70.71%) / 전체 문장 수 __14,083,748__(74.42%)
 
-* KCC150[파일 다운로드](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC150_equal_morph.egg "클릭하면 파일이 다운로드 됩니다")   
+* KCC150 [파일 다운로드](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC150_equal_morph.egg "클릭하면 파일을 다운로드 하는 곳으로 이동합니다.")   
   ||토큰 수 ||문장 수||
   |:------:|:------:|:------:|:------:|:------:|
   |전체|166,904,509|-|11,961,347|-|
