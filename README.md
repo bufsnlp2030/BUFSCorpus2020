@@ -85,11 +85,11 @@ All the sentences are no more than 30 words.
 
 #### 2) 인용문에서 내포문장을 추출하여 단문으로 변경 (KCCq28, KCC940 대상)
 ||문장 수|토큰 수|
-|:------:|:------:|:------:|
-|KCC150|11,961,347|166,904,509|
-|KCCq28|1,355,280|18,113,978|
-|KCC940|5,607,899|81,123,597|
-|계|__18,924,526__|__266,142,084__|
+|:------:|:------:|:------:|:------:|
+|KCC150|11,961,347|166,904,509|링크|
+|KCCq28|1,355,280|18,113,978|링크|
+|KCC940|5,607,899|81,123,597|링크|
+|계|__18,924,526__|__266,142,084__||
 
 #### 3) 문장 길이 별 전처리 말뭉치 분포
 <img width="550" alt="그림3" src="https://user-images.githubusercontent.com/61721751/75896241-20f26900-5e7a-11ea-97e9-2cc68b1b4bea.PNG">
@@ -163,21 +163,21 @@ All the sentences are no more than 30 words.
 #### 1) 형태소 정규화 전후 일치 토큰 및 문장수
 정규화 후 전체 토큰 수 188,208,139(70.71%) / 전체 문장 수 __14,083,748__(74.42%)
 
-* KCC150 [KCC150_equal_morph.egg](https://raw.githubusercontent.com/bufsnlp2030/BUFS-JBNUCorpus2020/master/KCC150_equal_morph.egg "클릭하면 파일을 다운로드 하는 곳으로 이동합니다.")   
+* KCC150 [KCC150_equal_morph.egg](https://raw.githubusercontent.com/bufsnlp2030/BUFS-JBNUCorpus2020/master/KCC150_equal_morph.egg "클릭하면 파일의 raw로 이동합니다.")   
   ||토큰 수 ||문장 수||
   |:------:|:------:|:------:|:------:|:------:|
   |전체|166,904,509|-|11,961,347|-|
   |형태소 일치(정규화 전)|23,227,819|13.92%|2,242,867|18.75%|
   |형태소 일치(정규화 후)|117,849,839|__70.61%__|8,875,652|__74.20%__|
 
-* KCC940 [KCC940_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC940_equal_morph.egg "클릭하면 파일을 다운로드 하는 곳으로 이동합니다.")   
+* KCC940 [KCC940_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC940_equal_morph.egg "클릭하면 파일의 raw로 이동합니다.")   
   ||토큰 수 ||문장 수||
   |:------:|:------:|:------:|:------:|:------:|
   |전체|81,123,597|-|5,607,899|-|
   |형태소 일치(정규화 전)|10,195,189|12.57%|928,976|16.57%|
   |형태소 일치(정규화 후)|56,938,877|__70.19%__|4,157,230|__74.13%__|
   
-* KCCq28 [KCCq28_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCCq28_equal_morph.egg "클릭하면 파일을 다운로드 하는 곳으로 이동합니다.")   
+* KCCq28 [KCCq28_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCCq28_equal_morph.egg "클릭하면 파일의 raw로 이동합니다.")   
   ||토큰 수 ||문장 수||
   |:------:|:------:|:------:|:------:|:------:|
   |전체|18,113,978|-|1,355,280|-|
