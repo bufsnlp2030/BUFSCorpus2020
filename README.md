@@ -15,8 +15,8 @@
 
 |||문장|어절|
 |:------:|:------:|:------:|:------:|
-|구축 규모|형태|14,083,748|188,208,139|
-||구문|3,376,968|33,197,177|
+|구축 규모|형태|14,617,767|196,683,135|
+||구문|3,889,038|38,521,608|
 |성능 평가|형태|92.00%|99.12%|
 ||구문|97.00%|99.58%|
 
@@ -170,14 +170,14 @@ All the sentences are no more than 30 words.
   |형태소 일치(정규화 전)|23,227,819|13.92%|2,242,867|18.75%|
   |형태소 일치(정규화 후)|117,849,839|__70.61%__|8,875,652|__74.20%__|
 
-* KCC940 [KCC940_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC940_equal_morph.egg "클릭하면 파일의 raw로 이동합니다.")   
+* KCC940 [KCC940_equal_morph.egg](https://raw.githubusercontent.com/bufsnlp2030/BUFS-JBNUCorpus2020/master/KCC940_equal_morph.egg "클릭하면 파일의 raw로 이동합니다.")   
   ||토큰 수 ||문장 수||
   |:------:|:------:|:------:|:------:|:------:|
   |전체|81,123,597|-|5,607,899|-|
   |형태소 일치(정규화 전)|10,195,189|12.57%|928,976|16.57%|
   |형태소 일치(정규화 후)|56,938,877|__70.19%__|4,157,230|__74.13%__|
   
-* KCCq28 [KCCq28_equal_morph.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCCq28_equal_morph.egg "클릭하면 파일의 raw로 이동합니다.")   
+* KCCq28 [KCCq28_equal_morph.egg](https://raw.githubusercontent.com/bufsnlp2030/BUFS-JBNUCorpus2020/master/KCCq28_equal_morph.egg "클릭하면 파일의 raw로 이동합니다.")   
   ||토큰 수 ||문장 수||
   |:------:|:------:|:------:|:------:|:------:|
   |전체|18,113,978|-|1,355,280|-|
