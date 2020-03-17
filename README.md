@@ -90,7 +90,7 @@ All the sentences are no more than 30 words.
 |KCC940|5,607,898|81,123,651|
 |계|__18,924,525__|__266,142,248__|
 
-#### 3) 문장 길이 별  말뭉치 분포
+#### 3) 문장 길이 별 전처리 말뭉치 분포
 <img width="550" alt="그림3" src="https://user-images.githubusercontent.com/61721751/75896241-20f26900-5e7a-11ea-97e9-2cc68b1b4bea.PNG">
 
 
