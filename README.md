@@ -202,7 +202,8 @@ about 460 million words (29,316,426 sentences)
 #### 2) 형태소 정규화 후 일치 문장 길이 분포
 - 원시 말뭉치의 문장 길이 분포와, 형태소 분석결과 일치 말뭉치의 문장 길이 분포가 유사함
 - 형태소 분석결과 불일치 현상은 문장 길이와 관련이 적음
-![그림8](https://user-images.githubusercontent.com/61721751/75903165-84819400-5e84-11ea-8065-de24641dd757.png)
+![그림8]<img width="783" alt="오케이요" src="https://user-images.githubusercontent.com/61721751/100754319-4d99d800-342e-11eb-9a9e-728c1e89a7e6.png">
+
  
 ### 규칙기반 형태소 분석 결과 정규화
 * 규칙기반 정규화 일부 (토큰 : 어절 단위)
