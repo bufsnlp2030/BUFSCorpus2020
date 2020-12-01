@@ -109,7 +109,7 @@ about 460 million words (29,316,426 sentences)
 ### 자동 형태소 및 구문 분석
 * 국민대, ETRI, 울산대 언어분석기를 이용하여 분석함
 * 국민대 언어분석 결과는 ETRI, 울산대 언어분석 결과와 형태소 분할 기준 및 태그가 상이하여, 실험에서 ETRI, 울산대 언어분석 결과만 비교함   
-<img width="550" alt="그림4" src="https://user-images.githubusercontent.com/61721751/75897523-091be480-5e7c-11ea-8911-f02e5149d199.PNG">
+<img width="387" alt="논문" src="https://user-images.githubusercontent.com/61721751/100742322-f3911680-341d-11eb-8b5a-5ff558bb31af.png">
 
 ### 반자동 형태소 및 구문 분석
 * 복수의 자동 형태소/구문 결과를 비교하여, 일치하는 분석결과를 정답이라고 가정함   
