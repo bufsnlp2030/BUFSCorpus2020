@@ -99,7 +99,7 @@ about 460 million words (29,316,426 sentences)
 |계|__44,585,931__|__651,864,673__|
 
 #### 3) 문장 길이 별 전처리 말뭉치 분포
-<img width="550" alt="그림3" src="https://user-images.githubusercontent.com/61721751/75896241-20f26900-5e7a-11ea-97e9-2cc68b1b4bea.PNG">
+<img width="783" alt="파일" src="https://user-images.githubusercontent.com/61721751/100748285-7ddd7880-3426-11eb-8a44-ff89b640e2b7.png">
 
 
 -------------------------------------------
