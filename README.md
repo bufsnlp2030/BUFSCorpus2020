@@ -169,7 +169,7 @@ about 460 million words (29,316,426 sentences)
 
 ## 형태소 분석 말뭉치
 #### 1) 형태소 정규화 전후 일치 토큰 및 문장수
-정규화 후 전체 토큰 수 188,208,139(70.71%) / 전체 문장 수 __14,083,748__(74.42%)
+정규화 후 전체 토큰 수 455,667,408(69.90%) / 전체 문장 수 __33,047,737__(74.12%)
 
 * KCC150 [KCC150_equal_morph.egg](https://raw.githubusercontent.com/bufsnlp2030/BUFS-JBNUCorpus2020/master/KCC150_equal_morph.egg "클릭하면 파일의 raw로 이동합니다.")   
   ||토큰 수 ||문장 수||
