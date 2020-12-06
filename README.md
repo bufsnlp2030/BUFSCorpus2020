@@ -369,7 +369,8 @@ JX+JX -> JX 	// 마저+도
   
 #### 2) 구문 일치 문장 길이 분포
 문장의 길이가 짧을 수록 문장 단위 의존 관계 일치 확률이 높음
-<img width="783" alt="구문분석이었던가" src="https://user-images.githubusercontent.com/61721751/100756692-d4e84b00-3430-11eb-8d8b-e0fc072025bc.png">
+![구문 일치 문장 길이 분포](https://user-images.githubusercontent.com/61721751/101279487-f9b03a00-3805-11eb-90ce-88de7bc996e0.PNG)
+
   
 ### 수작업 평가 및 예제
 #### 1) 임의로 100문장 선택 후 수작업 평가
