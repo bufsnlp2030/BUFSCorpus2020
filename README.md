@@ -192,7 +192,7 @@ about 460 million words (29,316,426 sentences)
   |형태소 일치(정규화 전)|2,875,703|15.88%|277,697|20.49%|
   |형태소 일치(정규화 후)|13,419,423|__74.08%__|1,050,866|__77.54%__|
   
-* KCC460
+* KCC460 [KCC460_equal_morph.vol1.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC_460_equal_morph.vol1.egg "클릭하면 파일의 raw로 이동합니다.") [KCC460_equal_morph.vol2.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC_460_equal_morph.vol2.egg "클릭하면 파일의 raw로 이동합니다.")[KCC460_equal_morph.vol3.egg](https://github.com/bufsnlp2030/BUFS-JBNUCorpus2020/blob/master/KCC_460_equal_morph.vol3.egg "클릭하면 파일의 raw로 이동합니다.")
   ||토큰 수 ||문장 수||
   |:------:|:------:|:------:|:------:|:------:|
   |전체|385,722,589|-|25,661,405|-|
